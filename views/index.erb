@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%= erb :__header__%>
+
+<body>
+    <%= erb :__nav__%>
+    
+    <main>
+        <div id="home-jumbo-header">
+            <div class="overlay">
+                <h1 class="jumbo-title">Bakery</h1>
+            </div>
+        </div>
+        
+        <div class="container">
+        <h1 class="container-title">Check out some of our recipies</h1>
+            <div class="card-container">
+                <a href="/cakes" class="card">
+                    <div class="card-img">
+                        <img src="/imgs/Cake.jpg" alt="">
+                    </div>
+                    <div class="card-title">
+                        <p>Cakes</p>  
+                    </div>
+                </a>
+                <a href="/cupcakes" class="card">
+                    <div class="card-img">
+                        <img src="/imgs/cupcakes.jpg" alt="">
+                    </div>
+                    <div class="card-title">
+                        <p>Cupcakes</p>  
+                    </div>
+                </a>
+                <a href="/cookies" class="card">
+                    <div class="card-img">
+                        <img src="/imgs/cookies.jpg" alt="">
+                    </div>
+                    <div class="card-title">
+                        <p>Cookies</p>  
+                    </div>
+                </a>
+                <a href="/muffins" class="card">
+                    <div class="card-img">
+                        <img src="/imgs/muffin.jpg" alt="">
+                    </div>
+                    <div class="card-title">
+                        <p>Muffins</p>  
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <%= erb :__footer__%>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

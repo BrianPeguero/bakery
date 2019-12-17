@@ -1,0 +1,25 @@
+<% require_relative "../models/dessert" %>
+
+<!DOCTYPE html>
+<html lang="en">
+    <%= erb :__header__%>
+<body>
+    <%= erb :__nav__%>    
+    
+    <div class="recipe-section">
+        <h1 class="recipe-title"><%= @dessert.getTitle() %></h1>
+        <img class="recipe-img" style="width: 75%;" src="<%= @dessert.getImg() %>">
+        <h1 class="recipe-subtitle">Ingredients</h1>
+        <div class="recipe-ingredients">
+            <% @dessert.getIngredients().each() do |ingredient| %>
+                <h3><%= ingredient %></h3>
+            <% end %>
+        </div>
+        <br>
+        <h1 class="recipe-subtitle">Instructions<h1>
+        <h3 class="recipe-instructions"><%= @dessert.getInstructions() %></h3>
+    </div>
+
+    <%= erb :__footer__%>
+</body>
+</html>

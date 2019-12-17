@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%= erb :__header__%>
+<body>
+    <%= erb :__nav__%>      
+    
+    <div class="container">
+        <div class="section">
+            <% @data["results"].each do |dessert| %>
+                <br>
+                <form action="/getRecipe" method="GET">
+                    <img class="dessert-img" width="600px" src="https://spoonacular.com/recipeImages/<%= dessert["image"] %>">
+                    <br>
+                    <input type="hidden" value="<%= dessert["id"] %>" name="dessert-id">
+                    <input class="dessert-title" type="submit" value="<%= dessert["title"] %>" name="dessert-name">
+                </form>
+                <br>
+            <% end %>
+        </div>
+    </div>
+    
+    <%= erb :__footer__%>
+
+</body>
+</html>
